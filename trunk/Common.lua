@@ -88,7 +88,7 @@ do
 	}
 
 	local function OnKeyDown(self, key)
-		print(self.owner.name, self:GetParent():GetName(), "OnKeyDown", key)
+		--print(self.owner.name, self:GetParent():GetName(), "OnKeyDown", key)
 		if key == "ESCAPE" then
 			local target = self.owner:GetBindingTarget(self)
 			if self.owner:ClearBinding(target) then
@@ -188,7 +188,7 @@ end
 local function StartBinding(self)
 	if self.bindingMode or InCombatLockdown() then return end
 	self.bindingMode = true
-	print(self.name, "binding mode on.")
+	--print(self.name, "binding mode on.")
 	self:GetHighlightTexture():SetDrawLayer("OVERLAY")
 	self:SetText(L["Stop Binding"])
 	self:UpdateButtons()
@@ -197,7 +197,7 @@ end
 local function StopBinding(self)
 	if not self.bindingMode then return end
 	self.bindingMode = nil
-	print(self.name, "binding mode off.")
+	--print(self.name, "binding mode off.")
 	self:GetHighlightTexture():SetDrawLayer("HIGHLIGHT")
 	self:SetText(L["Start Binding"])
 	self:UpdateButtons()
