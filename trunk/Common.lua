@@ -124,7 +124,7 @@ do
 
 	local function OnMouseWheel(self, delta)
 		--print(self.owner.name, self:GetParent():GetName(), "OnMouseWheel", delta)
-		OnKeyDown(self, delta > 0 and "MOUSEWHEELUP" or "MOUSEHWEELDOWN")
+		OnKeyDown(self, delta > 0 and "MOUSEWHEELUP" or "MOUSEWHEELDOWN")
 	end
 
 	local function OnEnter(self)
